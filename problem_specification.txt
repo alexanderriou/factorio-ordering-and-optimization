@@ -1,2 +1,14 @@
 There already exist various tools for the optimization of recipe ratios (for example Foreman). There does not exist (to my knowledge) any tool that incorporates a realtime element. That is to say, if you were to plan out a speedrun and wished to know what order to do things in (research techs, place down buildings, production priority and targets etc), there is a significant testing component to developing a route. This is not only time and skill intensive, but it also leaves the possibility of missing a more optimal solution. Furthermore, prioritization of modules and beacons in a time-constrained context is also reliant on intuition (mostly a problem for when the best targets are not known ahead of time). This tool aims to provide metrics for some of these problems. 
 The general format of each of these tools will specify the following: A use case (what context the tool should be used in), the simplifying assumptions (necessary for flexible and scrutible models), the tool, and the results (analysis of outputs and possible expansion of scope). In addition to that there will be a shared set of tools for making the processing and simulation of data easier: lua processors for the prototypes, MCMC simulation tools, graph traversal architectures, etc.
+
+Steady-State Recipe-Only Optimization
+Use Case: 
+    This is a proof-of-concept reproduction of the the existing tools that determine the ratios of recipes. 
+Assumptions: 
+    Steady-State - This disregards the evolution of the setup over time
+    Recipe-Only - This disregards building, module, and logistic constraints on the system. 
+Tool:
+    Lua parser - Breaks the prototype files (.lua) into a parseable tree and parses into usable data structures
+    Steady-State Matrix Solver - Represents recipes as entries in a linear system of equations. A solution is determined with a matrix solver.
+Results:
+    TBD
